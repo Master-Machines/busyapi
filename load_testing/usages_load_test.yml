@@ -1,0 +1,16 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 20
+      arrivalRate: 500
+  defaults:
+    headers:
+scenarios:
+  - flow:
+    - post:
+          url: "/api/usages"
+          json:
+            patientId: 100
+            timestamp: "Tue Nov 01 2016 09:11:51 GMT-0500 (CDT)"
+            medication: "Albuterol"
+
